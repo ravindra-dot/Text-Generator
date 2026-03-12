@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dummy text Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <span class="navbar-brand">Dummy Text Generator</span>
+        </div>
+    </nav>
+
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <div class="generator-box">
+                <h3 class="text-center mb-4">Random Text Generator</h3>
+                <div class="mb-3">
+                    <label class="form-label">Number of Words</label>
+                    <input type="number" class="form-control" id="WordCount" max="150"
+                        placeholder="Enter words (max 150)">
+                </div>
+
+                <div class="d-grid mb-3">
+                    <button id="generate" class="btn btn-primary">
+                        Generate Text
+                    </button>
+                </div>
+
+                <div class="mb-3">
+                    <textarea class="form-control" id="Output" rows="10" cols="10" style="resize: none;"
+                        placeholder="Generated text will appear here..."></textarea>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container mt-5">
+        <div class="alert alert-info">
+            <h5 class="mb-2">How To Use</h5>
+            <ul class="mb-0">
+                <li>Enter the number of words you want to generate.</li>
+                <li>Maximum allowed words: <b>150</b>.</li>
+                <li>Click <b>Generate Text</b> to create random dummy text.</li>
+                <li>Copy the generated text from the box below.</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
