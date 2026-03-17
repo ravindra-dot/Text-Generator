@@ -7,10 +7,30 @@ const copyBtn = document.querySelector("#copyBtn");
 
 /* Change label */
 typeSelect.addEventListener("change", () => {
-    const text = typeSelect.value.charAt(0).toUpperCase() + typeSelect.value.slice(1);
+    const value = typeSelect.value;
+    const text = value.charAt(0).toUpperCase() + value.slice(1);
+
     countLabel.textContent = "Number of " + text;
-    wordInput.placeholder = `Enter ${text.toLowerCase()} count (max 150)`;
+
+    if (value === "words") {
+        wordInput.placeholder = `Enter ${value} count (max 250)`;
+        wordInput.max = 250;
+    }
+    else if (value === "paragraphs") {
+        wordInput.placeholder = `Enter ${value} count (max 20)`;
+        wordInput.max = 20;
+    }
+    else if (value === "bytes") {
+        wordInput.placeholder = `Enter ${value} count (max 500)`;
+        wordInput.max = 500;
+    }
+    else {
+        wordInput.placeholder = `Enter ${value} count (max 50)`;
+        wordInput.max = 50;
+    }
 });
+
+// Words to use for genration
 const letters = {
     nouns: [
         "apple","ant","actor","air","alarm","album","angel","animal","army","arrow","anchor",
@@ -99,16 +119,21 @@ function rand(arr){
     return arr[Math.floor(Math.random()*arr.length)];
 }
 
+function getArticle(word){
+    return /^[aeiou]/i.test(word) ? "an" : "a";
+}
+
 /* Build sentence */
 function buildSentence(){
 
-    const article = rand(letters.articles);
+    
     const adj = rand(letters.adjectives);
+    const article = getArticle(adj);
     const noun = rand(letters.nouns);
     const verb = rand(letters.verbs);
     const obj = rand(letters.nouns);
 
-    let sentence = `${article} ${adj} ${noun} ${verb} the ${obj}`;
+    let sentence = `${article} ${adj} ${noun} ${verb} ${getArticle(obj)} ${obj}`;
 
     if(Math.random() > 0.6){
         sentence += ` ${rand(letters.conjunctions)} the ${rand(letters.adjectives)} ${rand(letters.nouns)} ${rand(letters.verbs)}`;
@@ -123,7 +148,7 @@ function generateWords(count){
     let words=[];
 
     while(words.length < count){
-        let sentence = buildSentence().replace(".","").split(" ");
+        let sentence = buildSentence().replace(/\./g, "").split(" ");
         words.push(...sentence);
     }
 
@@ -179,9 +204,10 @@ function GenerateText(){
 
     const count = Number(wordInput.value);
     const type = typeSelect.value;
+    const max = wordInput.max;
 
-    if(count <=0 || count>150){
-        alert("Enter number between 1 and 150");
+    if (count > max || count <= 0){
+        alert(`Enter a value between 1 and ${max}`);
         return;
     }
 
@@ -219,3 +245,9 @@ copyBtn.addEventListener("click",()=>{
         copyBtn.innerHTML='<i class="bi bi-copy"></i>';
     },1500);
 });
+
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
