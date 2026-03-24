@@ -4,76 +4,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Forge- Dummy text generator</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Free Nonsense Text Generator (Words, Paragraphs, Lists & Bytes) | Text Forge</title>
+
+    <meta name="description"
+        content="Generate random nonsense text, words, paragraphs, lists, and bytes instantly with Text Forge. Free online chaos text generator for testing and creativity.">
+    <meta name="keywords"
+        content="nonsense text generator, random text generator, lorem ipsum alternative, dummy text generator, random words generator">
+
+    <meta property="og:title" content="Text Forge - Nonsense Text Generator">
+    <meta property="og:description" content="Generate random nonsense text instantly for testing and fun.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/favicon/favicon-32x32.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Text Forge - Nonsense Text Generator">
+    <meta name="twitter:description" content="Generate random nonsense text instantly.">
+    <meta name="twitter:image" content="https://ravindra-dot.github.io/Text-Forge/assets/favicon/favicon-32x32.png">
+
+    <meta name="robots" content="index, follow">
+    <script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Text Forge",
+            "url": "https://yourdomain.com",
+            "applicationCategory": "Utility",
+            "operatingSystem": "All"
+            }
+    </script>
+
+    <link rel="canonical" href="https://ravindra-dot.github.io/Text-Forge/">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon/favicon.ico">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+
+    <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f172a">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
 
 </head>
 
 <body>
-<nav class="top-0 z-50 w-full border-b border-white/10 bg-slate-900/80 backdrop-blur-md glass-card">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
-        <div class="flex items-center justify-between py-3 md:py-5">
-            
-            <div class="flex items-center gap-10">
-                <a href="#" class="logo group">
-                    <div class="logo-icon group-hover:scale-105 transition-transform">TF</div>
-                    <span class="logo-text text-white">Text Forge</span>
-                </a>
+    <nav class="top-0 z-50 w-full border-b border-white/10 bg-slate-900/80 backdrop-blur-md glass-card">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+            <div class="flex items-center justify-between py-3 md:py-5">
 
-                <div class="hidden lg:flex items-center space-x-2">
-                    <a href="#main" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition">Main</a>
-                    <a href="#why" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition">About</a>
-                    <a href="#features" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition">Features</a>
+                <div class="flex items-center gap-10">
+                    <a href="#" class="logo group">
+                        <div class="logo-icon group-hover:scale-105 transition-transform">TF</div>
+                        <span class="logo-text text-white">Text Forge</span>
+                    </a>
+
+                    <div class="hidden lg:flex items-center space-x-2">
+                        <a href="#Nonsense-text-generator"
+                            class="px-4 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition">Main</a>
+                        <a href="#Why-use-Nonsense-text-generator"
+                            class="px-4 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition">About</a>
+                        <a href="#features"
+                            class="px-4 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition">Features</a>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <a href="https://github.com/ravindra-dot" target="_blank" rel="noopener noreferrer"
+                        class="hidden sm:flex items-center gap-3 group">
+                        <div
+                            class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 border border-white/10 group-hover:border-blue-500/50 transition">
+                            <i class="bi bi-github text-white text-lg"></i>
+                        </div>
+                    </a>
+
+
+                    <a href="#main" aria-label="Go to main section"
+                        class="glow-button px-6 py-2 rounded-full text-white font-semibold text-sm">
+                        Get Started
+                    </a>
+
+                    <button id="menuBtn" class="lg:hidden p-2 text-slate-300 hover:text-white focus:outline-none">
+                        <svg id="menuIcon" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
                 </div>
             </div>
+        </div>
 
-            <div class="flex items-center space-x-4">
-                <a href="https://github.com/ravindra-dot" target="_blank" class="hidden sm:flex items-center gap-3 group">
-                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 border border-white/10 group-hover:border-blue-500/50 transition">
-                        <i class="bi bi-github text-white text-lg"></i>
-                    </div>
-                </a>
-                
-                <button class="glow-button hidden md:block px-6 py-2 rounded-full text-white font-semibold text-sm">
-                    <a href="#main">Get Started</a>
-                </button>
-
-                <button id="menuBtn" class="lg:hidden p-2 text-slate-300 hover:text-white focus:outline-none">
-                    <svg id="menuIcon" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
+        <div id="mobileMenu" class="hidden lg:hidden bg-slate-900/95 border-t border-white/10 glass-card">
+            <div class="flex flex-col space-y-1 p-4">
+                <a href="#Nonsense-text-generator"
+                    class="px-4 py-4 text-base font-medium text-slate-300 hover:bg-white/5 hover:text-white rounded-xl transition">Main</a>
+                <a href="#Why-use-Nonsense-text-generator"
+                    class="px-4 py-4 text-base font-medium text-slate-300 hover:bg-white/5 hover:text-white rounded-xl transition">About</a>
+                <a href="#features"
+                    class="px-4 py-4 text-base font-medium text-slate-300 hover:bg-white/5 hover:text-white rounded-xl transition">Features</a>
+                <div class="pt-4 pb-2 px-4">
+                    <a class="glow-button px-6 py-2 rounded-full text-white font-semibold text-sm" href="#main"
+                        aria-label="Go to main section">
+                        Get Started
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div id="mobileMenu" class="hidden lg:hidden bg-slate-900/95 border-t border-white/10 glass-card">
-        <div class="flex flex-col space-y-1 p-4">
-            <a href="#main" class="px-4 py-4 text-base font-medium text-slate-300 hover:bg-white/5 hover:text-white rounded-xl transition">Main</a>
-            <a href="#why" class="px-4 py-4 text-base font-medium text-slate-300 hover:bg-white/5 hover:text-white rounded-xl transition">About</a>
-            <a href="#features" class="px-4 py-4 text-base font-medium text-slate-300 hover:bg-white/5 hover:text-white rounded-xl transition">Features</a>
-            <div class="pt-4 pb-2 px-4">
-                <button class="glow-button w-full py-3 rounded-xl text-white font-bold">Get Started</button>
-            </div>
-        </div>
-    </div>
-</nav>
+    </nav>
 
 
     <!-- main section -->
-    <section id="main" class="max-w-4xl mx-auto mt-16 px-6 text-white">
+    <section id="Nonsense-text-generator" class="max-w-4xl mx-auto mt-16 px-6 text-white">
 
         <!-- Heading -->
         <div class="text-center mb-10">
             <h1
                 class="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                Generate something meaningful
+                Generate Pure Nonsense...
             </h1>
-            <p class="text-gray-400">
-                Unequal masterpiece will be here....
+            <h2 class="text-gray-400">
+                Unequal masterpiece, No meaning... Just Chaos...
+            </h2>
+            <p class="text-gray-400 mt-2">
+                Text Forge is a free nonsense text generator that creates random words,
+                paragraphs, lists, and bytes instantly for testing and creative use.
             </p>
         </div>
 
@@ -110,7 +170,7 @@
                 <button id="generate"
                     class="bg-gradient-to-r from-blue-500 to-purple-500 hover:opacity-90 transition w-full md:w-64 py-4 rounded-xl font-bold uppercase tracking-widest flex items-center justify-center space-x-2 shadow-lg">
                     <span>✨</span>
-                    <span>Generate Now</span>
+                    <span>Generate Chaos</span>
                 </button>
             </div>
         </div>
@@ -119,7 +179,7 @@
         <div class="relative mb-6">
             <textarea id="Output" rows="15"
                 class="w-full bg-slate-800 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
-                placeholder="Generated text will appear here..."></textarea>
+                placeholder="Generated text will appear here..." loading="lazy"></textarea>
 
             <button id="copyBtn"
                 class="absolute top-2 right-2 bg-slate-700 text-white p-2 rounded-md hover:bg-slate-600 transition">
@@ -128,66 +188,108 @@
         </div>
 
     </section>
+
     <!-- Why to use -->
-    <section id="why" class="bg-slate-800 py-10 mt-10">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center gap-6">
-                <a class="flex flex-col items-center">
-                    <div class="logo-icon">TF</div>
-                    <span class="font-bold text-white">Text Forge</span>
-                </a>
-                <div class="md:w-2/3 text-center md:text-left">
-                    <h4 class="font-bold text-white">Why use Text Forge?</h4>
-                    <p class="text-gray-400 text-lg">
-                        Not Lorem Ipsum, but smarter placeholder text built from random words shaped into structured,
-                        meaningful results.
-                    </p>
+    <section id="Why-use-Nonsense-text-generator" class="bg-slate-800 py-10">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="mb-6 text-white text-2xl font-bold">Why Use Text Forge?</h2>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-slate-900 p-6 rounded-xl shadow-md">
+                    <h5 class="text-white font-semibold mb-2">No Meaning</h5>
+                    <p class="text-gray-400">Generate completely random and meaningless text.</p>
+                </div>
+
+                <div class="bg-slate-900 p-6 rounded-xl shadow-md">
+                    <h5 class="text-white font-semibold mb-2">Better than Lorem Ipsum</h5>
+                    <p class="text-gray-400">Use chaotic text instead of boring placeholder content.</p>
+                </div>
+
+                <div class="bg-slate-900 p-6 rounded-xl shadow-md">
+                    <h5 class="text-white font-semibold mb-2">Creative Testing</h5>
+                    <p class="text-gray-400">Perfect for UI testing and design experiments.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <section class="bg-slate-800 py-10">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="mb-6 text-white text-2xl font-bold">About Text Forge</h2>
+
+            <div class="bg-slate-900 p-6 rounded-xl shadow-md max-w-3xl mx-auto">
+                <p class="text-gray-400">
+                    Text Forge is a fast and simple online tool to generate random nonsense text.
+                    It creates words, paragraphs, lists, and bytes for developers, designers,
+                    and content creators who need placeholder or dummy text.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-slate-800 py-10">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="mb-6 text-white text-2xl font-bold">What is a Nonsense Text Generator?</h2>
+
+            <div class="bg-slate-900 p-6 rounded-xl shadow-md max-w-3xl mx-auto">
+                <p class="text-gray-400">
+                    A nonsense text generator creates random words, paragraphs, and lists without meaning.
+                    It is useful for UI testing, placeholder content, and design experiments.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- Features section -->
-    <section id="features" class="max-w-6xl mx-auto text-center mt-10 px-4">
-        <h4 class="mb-6 text-white text-2xl font-bold">Features</h4>
+    <section id="features" class="max-w-6xl mx-auto text-center mt-10 mb-10 px-4">
+        <h2 class="mb-6 text-white text-2xl font-bold">Features</h2>
 
         <div class="grid md:grid-cols-3 gap-6">
             <div class="bg-slate-800 p-6 rounded-xl shadow-md hover:scale-105 transition">
-                <h5 class="text-white font-semibold mb-2">Fast Generation</h5>
+                <h5 class="text-white font-semibold mb-2">Fast Chaos</h5>
                 <p class="text-gray-400">
-                    Generate dummy text instantly with one click.
+                    Instantly generate random nonsense text.
                 </p>
             </div>
 
             <div class="bg-slate-800 p-6 rounded-xl shadow-md hover:scale-105 transition">
-                <h5 class="text-white font-semibold mb-2">Accurate Results</h5>
+                <h5 class="text-white font-semibold mb-2">Zero Meaning</h5>
                 <p class="text-gray-400">
-                    Text follows realistic patterns useful for development.
+                    Words are random and intentionally meaningless.
                 </p>
             </div>
 
             <div class="bg-slate-800 p-6 rounded-xl shadow-md hover:scale-105 transition">
-                <h5 class="text-white font-semibold mb-2">Copy & Paste</h5>
+                <h5 class="text-white font-semibold mb-2">Copy & Confuse</h5>
                 <p class="text-gray-400">
-                    Copy generated text instantly and use it anywhere.
+                    Copy the chaos and use it anywhere you want.
                 </p>
             </div>
         </div>
     </section>
 
-    <section id="how" class="max-w-4xl mx-auto mt-10 px-4 text-white">
-        <div class="bg-slate-800 p-6 rounded-xl">
-            <h4 class="font-bold mb-3">How to use</h4>
-            <ol class="list-decimal list-inside text-gray-400 space-y-2 pl-2">
-                <li><span class="text-white font-medium">Click</span> Generate Text</li>
-                <li><span class="text-white font-medium">Enter</span> number of words</li>
-                <li><span class="text-white font-medium">Maximum</span> limit 150</li>
-                <li><span class="text-white font-medium">Press</span> Enter or Generate</li>
-                <li><span class="text-white font-medium">Copy</span> the generated text</li>
-            </ol>
+    <section id="how" class="bg-slate-800 py-10">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="mb-6 text-white text-2xl font-bold">How to Use</h2>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-slate-900 p-6 rounded-xl shadow-md">
+                    <h5 class="text-white font-semibold mb-2">Step 1</h5>
+                    <p class="text-gray-400">Choose type and enter number of words.</p>
+                </div>
+
+                <div class="bg-slate-900 p-6 rounded-xl shadow-md">
+                    <h5 class="text-white font-semibold mb-2">Step 2</h5>
+                    <p class="text-gray-400">Click “Generate Chaos”.</p>
+                </div>
+
+                <div class="bg-slate-900 p-6 rounded-xl shadow-md">
+                    <h5 class="text-white font-semibold mb-2">Step 3</h5>
+                    <p class="text-gray-400">Copy and use your generated text.</p>
+                </div>
+            </div>
         </div>
     </section>
-
 
     <footer class="text-center mt-10 mb-4 text-gray-400">
         <p>
@@ -195,7 +297,7 @@
         </p>
     </footer>
 
-    <script src="script.js"></script>
+    <script defer src="assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
 </body>
 
