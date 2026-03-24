@@ -234,6 +234,15 @@ function GenerateText(){
     output.value = result;
 }
 
+
+//Event listeners...
+
+wordInput.addEventListener("keypress",(e)=>{
+    if(e.key=="Enter"){
+        GenerateText()
+    }
+})
+
 GenBtn.addEventListener("click", GenerateText);
 
 
@@ -251,3 +260,4 @@ const mobileMenu = document.getElementById('mobileMenu');
 menuBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
     });
+
